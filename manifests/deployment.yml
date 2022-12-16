@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kaj-619f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kaj-619f"
+  template:
+    metadata:
+      labels:
+        app: "kaj-619f"
+    spec:
+      containers:
+        - name: "kaj-619f"
+          image: "kmacmir.azurecr.io/kaj"
+          ports:
+          - containerPort: 80
